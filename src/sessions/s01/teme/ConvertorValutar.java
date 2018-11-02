@@ -9,7 +9,8 @@ public class ConvertorValutar {
 		double curs = in.nextDouble();
 		System.out.print("Suma EUR: ");
 		double suma = in.nextDouble();
-		System.out.println("Suma in RON: " + curs * suma);
+		double sumaInRon = curs * suma;
+		System.out.println("Suma in RON: " + sumaInRon);
 		in.close();
 	}
 }
