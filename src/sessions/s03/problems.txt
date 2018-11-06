@@ -1,0 +1,6 @@
+1. Sa se implementeze o metoda care verifica daca un numar primit ca parametru este par.
+2. Sa se implementeze o metoda care returneaza numarul minim dintr-un sir de numere primit ca parametru.
+3. Sa se implementeze o metoda care returneaza media aritmetica a numerelor dintr-un sir de numere primit ca parametru.
+4. Sa se implementeze o metoda care returneaza produsul numerelor nenule dintr-un sir de numere primit ca parametru.
+5. Sa se implementeze o metoda care returneaza cate numere negative se gasesc intr-un sir de numere primit ca parametru.
+6. Sa se implementeze o metoda care primeste ca parametru un sir de cifre intre 0 si 9 si returneaza numarul format din ele.
