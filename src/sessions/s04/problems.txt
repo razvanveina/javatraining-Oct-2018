@@ -1,6 +1,19 @@
-1.	Sa se implementeze o clasa care contine o metoda care returneaza factorialul unui numar n primit ca parametru. Factorialul unui numar n se calculeaza ca 1 x 2 x 3 x .... x n
-2.	Sa se implementeze o clasa care contine o metoda care verifica daca un numar primit ca si parametru este palindrom. Un palindrom e un numar care citit din ambele parti e la fel (ex: 123321, 121, ...).
-3.	Sa se implementeze o clasa care contine o metoda care verifica daca un numar primit ca parametru este prim. Un numar prim se divide exact doar cu 1 si cu el insusi.
-4.	Sa se implementeze o clasa care contine o metoda care calculeaza cel mai mic multiplu comun (cmmmc) a doua numere a si b primite ca parametru. cmmmc este cel mai mic numar care se imparte exact la a si b.
-5.	Sa se implementeze o clasa care contine o metoda care primeste ca parametru un sir de numere si returneaza sirul respectiv inversat.
+
+1.	Sa se implementeze o metoda care returneaza factorialul unui numar n primit ca parametru. 
+Factorialul unui numar n se calculeaza ca 1 x 2 x 3 x .... x n
+
+2.	Sa se implementeze o metoda care verifica daca un numar primit ca si parametru este palindrom. 
+Un palindrom e un numar care citit din ambele parti e la fel (ex: 123321, 121, ...).
+
+3.	Sa se implementeze o metoda care verifica daca un numar primit ca parametru este prim. 
+Un numar prim se divide exact doar cu 1 si cu el insusi.
+
+4.	Sa se implementeze o metoda care calculeaza cel mai mic multiplu comun (cmmmc) a doua numere 
+a si b primite ca parametru. cmmmc este cel mai mic numar care se imparte exact la a si b.
+
+5.	Sa se implementeze o metoda care primeste ca parametri un sir de numere a si un numar n. 
+Metoda cauta prima aparitie a numarului n in sirul a si cand il gaseste returneaza urmatorul 
+numar din sir. Daca numarul cautat este pe ultima pozitie atunci metoda va returna -2, iar daca 
+numarul cautat nu exista metoda va returna -1.
+
 
