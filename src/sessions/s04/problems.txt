@@ -16,4 +16,9 @@ Metoda cauta prima aparitie a numarului n in sirul a si cand il gaseste returnea
 numar din sir. Daca numarul cautat este pe ultima pozitie atunci metoda va returna -2, iar daca 
 numarul cautat nu exista metoda va returna -1.
 
+Bonus:
+6. Sa se implementeze o metoda care primeste ca parametru un sir de numere si returneaza sirul respectiv inversat
+
+Si una cu clase
+7. Sa se implementeze o clasa Square care modeleaza un patrat si are ca proprietate o variabila side de tip int care reprezinta lungimea laturii patratului. Clasa va avea un constructor care va primi ca parametru lungimea laturii si o metoda getArea() care returneaza aria patratului. Implementati o clasa SquareClient care creeaza 3 obiecte de tip Square si le afiseaza ariile cu ajutorul metodei getArea()
 
