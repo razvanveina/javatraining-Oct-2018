@@ -1,0 +1,33 @@
+1. Pornind de la problema cu calculatorul de la sesiunea precedenta sa se realizeze o aplicatie care poate fi folosita ca
+un calculator, respectiv, intr-o bucla asteapta de la utilizator o comanda alcatuita dintr-un operator urmat de un operand
+si afiseaza rezultatul operatiei respective.
+Sa se adauge operatia = care reinitializeaza currentValue cu o valoare
+Exemplu de utilizare:
+0
++25
+25
+-7
+18
+*2
+36
+=0
+0
+
+2. Sa se realizeze o metoda care primeste ca parametru un numar si il afiseaza folosind caracterele _ si | sub forma:
+ __      __  __      __  __  __  __  __ 
+|  |   | __| __||__||__ |__    ||__||__|
+|__|   ||__  __|   | __||__|   ||__| __|
+
+Si acum probleme simple:)
+3. Sa se implementeze o metoda care primeste ca parametru un sir de numere si returneaza cate perechi de numere din sir
+au suma egala cu 10
+Ex: {1,3,5,6,7,8,9} => 2
+
+4. Sa se implementeze o metoda care verifica daca 3 numere primite ca parametru verifica teorema lui Pitagora
+(a*a+b*b=c*c)
+
+5. Sa se implementeze o metoda care primeste ca parametru un sir de numere cu un numar par de elemente si compara suma elementelor
+din prima jumatate cu suma elementelor din a doua jumatate si returneaza un enum cu valorile posibile (LEFT, RIGHT, MIDDLE)
+Daca suma elementelor din prima jumatate e mai mare decat suma elementelor din a doua jumatate returneaza LEFT
+Daca suma elementelor din prima jumatate e mai mica decat suma elementelor din a doua jumatate returneaza RIGHT
+Daca suma elementelor din prima jumatate e egala cu suma elementelor din a doua jumatate returneaza MIDDLE
