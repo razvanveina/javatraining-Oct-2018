@@ -24,7 +24,7 @@ au suma egala cu 10
 Ex: {1,3,5,6,7,8,9} => 2
 
 4. Sa se implementeze o metoda care verifica daca 3 numere primite ca parametru verifica teorema lui Pitagora
-(a*a+b*b=c*c)
+(a*a + b*b =c*c)
 
 5. Sa se implementeze o metoda care primeste ca parametru un sir de numere cu un numar par de elemente si compara suma elementelor
 din prima jumatate cu suma elementelor din a doua jumatate si returneaza un enum cu valorile posibile (LEFT, RIGHT, MIDDLE)
