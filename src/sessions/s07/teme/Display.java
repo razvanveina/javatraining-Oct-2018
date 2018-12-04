@@ -26,6 +26,9 @@ public class Display {
 		display.showNumber(1212012);
 	}
 
+	// o metoda care primeste ca parametru 2 numere intregi a si b si returneaza
+	// a/b iar daca b = 0 returneaza -1
+
 	// 120
 	private void showNumber(int n) {
 		String s = "" + n;
