@@ -1,0 +1,18 @@
+1. Sa se implementeze o clasa numita Student cu:
+  - 3 variabile membru: nume, nota1, nota2
+  - 1 constructor cu parametrii nume, nota1, nota2
+  - o metoda getMedia care returneaza media pentru un student ca fiind suma notelor / 2
+Sa se implementeze o clasa cu un program care construieste o lista de minim 3 studenti, si afiseaza clasamentul acestora in ordinea mediilor.
+
+2. Se da urmatoarea interfata:
+public interface Shape {
+  public double getArea();
+  public double getPerimeter();
+}
+
+Sa se implementeze 3 clase, Square, Rectangle, Circle care implementeaza aceasta interfata si sa se creeze un program in care se creaza un 
+array de Shape-uri care va contine cate o instanta din fiecare clasa creata iar fiecarei instante respective i se vor apela metodele getArea
+si getShape.
+
+
+  
