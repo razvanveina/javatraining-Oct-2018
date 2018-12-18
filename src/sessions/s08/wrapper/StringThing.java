@@ -23,9 +23,18 @@ public class StringThing {
 		System.out.println(s.startsWith("a"));
 		System.out.println(s.startsWith("b"));
 		System.out.println(s.endsWith("b"));
+		System.out.println(s.length());
 		String[] splits = "123dwq,23asdf4,asdf345,45asdfs6".split(",");
 		for (String ss : splits) {
 			System.out.println(ss);
 		}
+
+		int n = 10;
+		System.out.println(n);
+
+		String s3 = "" + n;
+		s3 = String.valueOf(n);
+		s3 = Integer.toString(n);
+
 	}
 }
