@@ -14,11 +14,11 @@ public class FileUtils {
 	public static void main(String[] args) throws IOException {
 		writeFile();
 		readFile();
-		readFileToStringArray();
+		readFileToStringArray("test.txt");
 	}
 
-	private static void readFileToStringArray() throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("test.txt")));
+	public static List<String> readFileToStringArray(String fileName) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
 
 		List<String> lines = new ArrayList<String>();
 
@@ -32,8 +32,10 @@ public class FileUtils {
 			// System.out.println(s);
 		}
 
-		System.out.println(lines);
+		// System.out.println(lines);
 		br.close();
+
+		return lines;
 	}
 
 	private static void readFile() throws IOException {

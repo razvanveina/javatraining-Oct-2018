@@ -1,8 +1,13 @@
 package sessions.s10.collections;
 
-public class Car {
+import java.io.Serializable;
+
+public class Car implements Serializable {
+	private static final long serialVersionUID = 1L;
+
 	private String brand;
 	private String model;
+	private int year;
 
 	public Car(String brand, String model) {
 		super();
@@ -12,7 +17,7 @@ public class Car {
 
 	@Override
 	public String toString() {
-		return "Car [brand=" + brand + ", model=" + model + "]";
+		return "" + year;
 	}
 
 	@Override
