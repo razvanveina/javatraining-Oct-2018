@@ -2,10 +2,11 @@ package project.core.menu;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+
+import project.core.keyboard.Keyboard;
 
 public class Menu extends MenuItem {
-	Scanner keyboard = new Scanner(System.in);
+	Keyboard keyboard = Keyboard.getInstance();
 	private List<MenuItem> items = new ArrayList<>();
 	private MenuItem backAction;
 
@@ -21,7 +22,7 @@ public class Menu extends MenuItem {
 	public void doAction() {
 		while (true) {
 			showMenu();
-			String option = keyboard.nextLine();
+			String option = keyboard.getText();
 			MenuItem item = getMenuItemForOption(option);
 			if (item == backAction) {
 				return;
@@ -45,6 +46,7 @@ public class Menu extends MenuItem {
 	}
 
 	private void showMenu() {
+		System.out.println("Menu " + name);
 		for (MenuItem item : items) {
 			System.out.println(item);
 		}

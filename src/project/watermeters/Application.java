@@ -3,6 +3,8 @@ package project.watermeters;
 import project.core.menu.BackAction;
 import project.core.menu.Menu;
 import project.core.menu.MenuItem;
+import project.watermeters.actions.AddAction;
+import project.watermeters.actions.EditAction;
 
 public class Application {
 	public static void main(String[] args) {
@@ -16,19 +18,8 @@ public class Application {
 	}
 
 	private MenuItem createMenu() {
-		MenuItem addReading = new MenuItem("1", "Add") {
-			@Override
-			public void doAction() {
-				System.out.println("Aici adaugam ceva");
-			}
-		};
-
-		MenuItem editReading = new MenuItem("2", "Edit") {
-			@Override
-			public void doAction() {
-				System.out.println("Aici editam ceva");
-			}
-		};
+		MenuItem addReading = new AddAction();
+		MenuItem editReading = new EditAction();
 
 		BackAction back = new BackAction("0", "Back");
 
@@ -42,7 +33,7 @@ public class Application {
 		statisticsMenu.addItem(back);
 		statisticsMenu.setBackAction(back);
 
-		Menu mainMenu = new Menu();
+		Menu mainMenu = new Menu("", "Main");
 		mainMenu.addItem(readingsMenu);
 		mainMenu.addItem(statisticsMenu);
 		mainMenu.addItem(back);

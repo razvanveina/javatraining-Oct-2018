@@ -1,8 +1,8 @@
 package project.core.menu;
 
 public abstract class MenuItem {
-	private String name;
 	private String key;
+	protected String name;
 
 	public MenuItem(String key, String name) {
 		super();
