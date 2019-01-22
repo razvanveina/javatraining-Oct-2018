@@ -5,14 +5,34 @@ import project.core.menu.Menu;
 import project.core.menu.MenuItem;
 import project.watermeters.actions.AddAction;
 import project.watermeters.actions.EditAction;
+import project.watermeters.actions.ViewAction;
+import project.watermeters.actions.ViewConsumptionAction;
+import project.watermeters.model.Database;
+import project.watermeters.model.Reading;
+import project.watermeters.utils.Serializer;
 
 public class Application {
 	public static void main(String[] args) {
 		Application app = new Application();
+		// app.init();
 		app.run();
 	}
 
+	private void init() {
+		Database database = ApplicationSession.getInstance().getDatabase();
+		database.addReading(new Reading(2018, 11, 100, 100));
+		database.addReading(new Reading(2018, 12, 110, 109));
+	}
+
 	private void run() {
+		Serializer serializer = ApplicationSession.getInstance().getSerializer();
+		Database database = serializer.load();
+		if (database == null) {
+			return;
+		}
+
+		ApplicationSession.getInstance().setDatabase(database);
+
 		MenuItem mainMenu = createMenu();
 		mainMenu.doAction();
 	}
@@ -20,6 +40,9 @@ public class Application {
 	private MenuItem createMenu() {
 		MenuItem addReading = new AddAction();
 		MenuItem editReading = new EditAction();
+
+		MenuItem viewReadings = new ViewAction();
+		MenuItem viewConsumption = new ViewConsumptionAction();
 
 		BackAction back = new BackAction("0", "Back");
 
@@ -30,6 +53,8 @@ public class Application {
 		readingsMenu.setBackAction(back);
 
 		Menu statisticsMenu = new Menu("2", "Statistics");
+		statisticsMenu.addItem(viewReadings);
+		statisticsMenu.addItem(viewConsumption);
 		statisticsMenu.addItem(back);
 		statisticsMenu.setBackAction(back);
 

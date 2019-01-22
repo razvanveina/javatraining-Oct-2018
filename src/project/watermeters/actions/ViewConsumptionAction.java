@@ -6,11 +6,11 @@ import project.watermeters.ApplicationSession;
 import project.watermeters.model.Database;
 import project.watermeters.model.Reading;
 
-public class EditAction extends MenuItem {
+public class ViewConsumptionAction extends MenuItem {
 	private Keyboard keyboard = Keyboard.getInstance();
 
-	public EditAction() {
-		super("2", "Edit");
+	public ViewConsumptionAction() {
+		super("2", "View consumption");
 	}
 
 	@Override
@@ -18,14 +18,9 @@ public class EditAction extends MenuItem {
 		Database db = ApplicationSession.getInstance().getDatabase();
 		int year = keyboard.getInt("Year: ");
 		int month = keyboard.getInt("Month: ");
-		Reading reading = db.getReadingByYearAndMonth(year, month);
-		if (reading == null) {
-			System.out.println("Reading does not exist !!!");
-			return;
-		}
+		Reading currentReading = db.getReadingByYearAndMonth(year, month);
+		Reading previousReading = db.getPreviousReadingByYearAndMonth(year, month);
 
-		int coldWater = keyboard.getInt("New cold water: ");
-		int hotWater = keyboard.getInt("New hot water: ");
-		db.editReading(year, month, coldWater, hotWater);
 	}
+
 }
