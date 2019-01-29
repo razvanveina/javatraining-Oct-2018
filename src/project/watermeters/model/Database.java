@@ -12,4 +12,6 @@ public interface Database {
 	List<Reading> getReadings();
 
 	Reading getPreviousReadingByYearAndMonth(int year, int month);
+
+	void clear();
 }

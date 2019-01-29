@@ -21,6 +21,10 @@ public class ViewConsumptionAction extends MenuItem {
 		Reading currentReading = db.getReadingByYearAndMonth(year, month);
 		Reading previousReading = db.getPreviousReadingByYearAndMonth(year, month);
 
+		int hot = currentReading.getHotWater() - previousReading.getHotWater();
+		int cold = currentReading.getColdWater() - previousReading.getColdWater();
+
+		System.out.println(year + " " + month + " " + " Hot: " + hot + " Cold: " + cold);
 	}
 
 }

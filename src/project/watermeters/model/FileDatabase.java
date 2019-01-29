@@ -14,6 +14,9 @@ public class FileDatabase implements Database, Serializable {
 
 	@Override
 	public void addReading(Reading reading) {
+		if (!reading.isMonthValid()) {
+			throw new RuntimeException("Luna invalida!");
+		}
 		readings.add(reading);
 		Serializer serializer = ApplicationSession.getInstance().getSerializer();
 		serializer.save(this);
@@ -32,6 +35,9 @@ public class FileDatabase implements Database, Serializable {
 	@Override
 	public void editReading(int year, int month, int coldWater, int hotWater) {
 		Reading reading = getReadingByYearAndMonth(year, month);
+//		if (reading == null) {
+//			throw new RuntimeException("Reading not found");
+//		}
 		reading.edit(coldWater, hotWater);
 		Serializer serializer = ApplicationSession.getInstance().getSerializer();
 		serializer.save(this);
@@ -53,6 +59,13 @@ public class FileDatabase implements Database, Serializable {
 		}
 
 		return getReadingByYearAndMonth(previousYear, previousMonth);
+	}
+
+	@Override
+	public void clear() {
+		readings.clear();
+		Serializer serializer = ApplicationSession.getInstance().getSerializer();
+		serializer.save(this);
 	}
 
 }

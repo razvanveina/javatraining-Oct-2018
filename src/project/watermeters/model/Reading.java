@@ -3,6 +3,7 @@ package project.watermeters.model;
 import java.io.Serializable;
 
 public class Reading implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	private int year;
@@ -31,4 +32,15 @@ public class Reading implements Serializable {
 		return year + " " + month + " " + coldWater + " " + hotWater;
 	}
 
+	public boolean isMonthValid() {
+		return month >= 1 && month <= 12;
+	}
+
+	public int getColdWater() {
+		return coldWater;
+	}
+
+	public int getHotWater() {
+		return hotWater;
+	}
 }

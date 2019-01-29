@@ -4,6 +4,7 @@ import project.core.menu.BackAction;
 import project.core.menu.Menu;
 import project.core.menu.MenuItem;
 import project.watermeters.actions.AddAction;
+import project.watermeters.actions.ClearAction;
 import project.watermeters.actions.EditAction;
 import project.watermeters.actions.ViewAction;
 import project.watermeters.actions.ViewConsumptionAction;
@@ -40,6 +41,7 @@ public class Application {
 	private MenuItem createMenu() {
 		MenuItem addReading = new AddAction();
 		MenuItem editReading = new EditAction();
+		MenuItem clear = new ClearAction();
 
 		MenuItem viewReadings = new ViewAction();
 		MenuItem viewConsumption = new ViewConsumptionAction();
@@ -49,6 +51,7 @@ public class Application {
 		Menu readingsMenu = new Menu("1", "Readings");
 		readingsMenu.addItem(addReading);
 		readingsMenu.addItem(editReading);
+		readingsMenu.addItem(clear);
 		readingsMenu.addItem(back);
 		readingsMenu.setBackAction(back);
 

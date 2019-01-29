@@ -29,7 +29,11 @@ public class Menu extends MenuItem {
 			}
 
 			if (item != null) {
-				item.doAction();
+				try {
+					item.doAction();
+				} catch (RuntimeException e) {
+					System.out.println(e.getMessage());
+				}
 			} else {
 				System.out.println("Invalid option!");
 			}

@@ -20,8 +20,7 @@ public class EditAction extends MenuItem {
 		int month = keyboard.getInt("Month: ");
 		Reading reading = db.getReadingByYearAndMonth(year, month);
 		if (reading == null) {
-			System.out.println("Reading does not exist !!!");
-			return;
+			throw new RuntimeException("Reading not found");
 		}
 
 		int coldWater = keyboard.getInt("New cold water: ");
