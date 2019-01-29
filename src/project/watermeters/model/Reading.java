@@ -29,7 +29,8 @@ public class Reading implements Serializable {
 
 	@Override
 	public String toString() {
-		return year + " " + month + " " + coldWater + " " + hotWater;
+		return "| " + String.format("%5d", year) + " | " + String.format("%5d", month) + " | "
+				+ String.format("%5d", coldWater) + " | " + String.format("%5d", hotWater) + "|";
 	}
 
 	public boolean isMonthValid() {

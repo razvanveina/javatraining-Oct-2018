@@ -13,8 +13,10 @@ public class ViewAction extends MenuItem {
 	@Override
 	public void doAction() {
 		Database database = ApplicationSession.getInstance().getDatabase();
+		System.out.println("-------------------------------------");
 		for (Reading reading : database.getReadings()) {
 			System.out.println(reading);
+			System.out.println("------------------------------------");
 		}
 	}
 
